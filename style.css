@@ -128,18 +128,11 @@ button:hover {
 
   .payment-options {
     flex-direction: column;
-    gap: 8px;
+    gap: 3px;
   }
 
-  .result-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .result-card img {
-    width: 100%;
-    height: auto;
-  }
+  
+  
 }
 
 
@@ -154,40 +147,4 @@ body[dir="rtl"] .header {
 form label {
   margin-top: 10px;
 }
-.results-container {
-  margin-top: 20px;
-  display: grid;
-  gap: 16px;
-}
 
-.result-card {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #f9f9f9;
-}
-
-.result-card img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.result-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.result-info h4 {
-  margin: 0;
-  font-size: 16px;
-}
-
-.result-info p {
-  margin: 4px 0 0 0;
-  font-size: 14px;
-}
