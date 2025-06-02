@@ -126,20 +126,18 @@ button:hover {
     font-size: 1rem;
   }
   .payment-options {
-  margin: 1rem 0;
-  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* Controls vertical spacing between each option */
+  margin-top: 8px;
 }
-  .payment-option {
-    display: flex;
-    gap: 1px;
-    align-items: center;
-    margin-bottom: 16px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  .payment-option input[type="radio"] {
-  margin: 0;
-  accent-color: #007bff; /* Optional: blue highlight */
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Controls space between radio button and text */
+  font-size: 16px;
+  line-height: 1.2;
 }
   
   
