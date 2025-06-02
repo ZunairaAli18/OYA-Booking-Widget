@@ -9,7 +9,7 @@
 <body>
   <div class="widget">
     <div class="header">
-      <h2 id="title">OYA Booking Widget</h2>
+      <h2 id="title">Confirm and Pay</h2>
       <select id="languageToggle">
         <option value="en">English</option>
         <option value="ar">العربية</option>
@@ -17,6 +17,12 @@
     </div>
 
     <form id="bookingForm">
+      <label class="text" data-i18n="name">Name</label>
+      <input class="box" type="text" id="name" placeholder="Enter full name" />
+      
+      <label class="text" data-i18n="email">Email</label>
+      <input class="box" type="text" id="email" placeholder="Enter email address" />
+
       <label class="text" data-i18n="travelType">Travel Type</label>
       <select class="box" id="travelType">
         <option>Hotel Day Use</option>
@@ -33,9 +39,14 @@
       <label class="text" data-i18n="checkout">Check-out Date / Duration</label>
       <input class="box" type="date" id="checkout" />
 
-      <label class="text" data-i18n="guests">Guests</label>
-      <input class="box" type="number" id="guests" min="1" value="1" />
-
+      <label class="text" data-i18n="guests">Number of Guests</label>
+      <select class="box" id="guests">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>3+</option>
+      </select>
+      
       <label class="text" data-i18n="payment">Payment Method</label>
       <div class="payment-options">
         <label><input type="radio" name="payment" value="fawry" /> Fawry</label>
@@ -43,7 +54,7 @@
         <label><input type="radio" name="payment" value="card" /> Credit Card</label>
       </div>
 
-      <button type="submit" id="submitBtn">Confirm & Pay</button>
+      <button class="confirm" type="submit" id="submitBtn">Confirm & Pay</button>
     </form>
   </div>
 
