@@ -125,17 +125,22 @@ button:hover {
     padding: 12px;
     font-size: 1rem;
   }
-
+  .payment-options {
+  margin: 1rem 0;
+  font-family: sans-serif;
+}
   .payment-option {
     display: flex;
-    gap: 3px;
+    gap: 10px;
     align-items: center;
     margin-bottom: 10px;
     font-size: 1rem;
     cursor: pointer;
-    padding-left: -20px;
   }
-
+  .payment-option input[type="radio"] {
+  margin: 0;
+  accent-color: #007bff; /* Optional: blue highlight */
+}
   
   
 }
