@@ -1,5 +1,7 @@
 const translations = {
   en: {
+    name: "Name",
+    email: "Email",
     travelType: "Travel Type",
     destination: "Destination",
     checkin: "Check-in Date",
@@ -10,6 +12,8 @@ const translations = {
     confirm: "Confirm & Pay"
   },
   ar: {
+    name: "الاسم",
+  email: "البريد الإلكتروني",
     travelType: "نوع الرحلة",
     destination: "الوجهة",
     checkin: "تاريخ الوصول",

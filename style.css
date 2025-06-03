@@ -54,9 +54,7 @@ form {
   flex-direction: column;
   gap: 5px;
 }
-.confirm{
-  font-family: 'font';
-}
+
 .confirm {
   background: #003366;
   color: white;
@@ -64,7 +62,7 @@ form {
   padding: 10px;
   cursor: pointer;
   border-radius: 10px;
-  font-style: sf;
+  
 }
 
 button:hover {
