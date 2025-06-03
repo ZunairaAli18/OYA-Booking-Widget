@@ -155,8 +155,8 @@ document.getElementById("bookingForm").addEventListener("submit", (e) => {
     alert("Please select a payment method.");
     return;
   }
-  if(checkBudget()){
+  
     simulatePayment(selectedPayment.value);
-  }
+  
   
 });
