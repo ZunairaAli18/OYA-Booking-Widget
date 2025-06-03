@@ -88,58 +88,6 @@ function checkBudget() {
   return true;
 }
 
-document.getElementById("searchBtn").addEventListener("click", (e) => {
-  e.preventDefault(); // prevent form submission
-
-  const destination = document.getElementById("destination").value.trim();
-  const checkin = document.getElementById("checkin").value;
-  const checkout = document.getElementById("checkout").value;
-  const guests = document.getElementById("guests").value;
-  const budget = document.getElementById("budgetRange").value;
-  const travelType = document.getElementById("travelType").value;
-
-  // Get selected interests
-  const interestCheckboxes = document.querySelectorAll(".interests input[type='checkbox']:checked");
-  const selectedInterests = Array.from(interestCheckboxes).map(cb => cb.value);
-
-  if (!destination || !checkin || !checkout) {
-    alert("Please fill in destination, check-in, and check-out dates.");
-    return;
-  }
-  if(!selectedInterests){
-    alert("Please fill your interests.");
-    return;
-  }
-  if(!checkBudget()){
-    return;
-  }
-  
-  const matchingLocations = locations.filter(loc => {
-    const matchesBudget = loc.cost <= budgetValue;
-    const matchesInterests = selectedInterests.every(interest => loc.interests.includes(interest));
-    const matchesDestination = loc.name.toLowerCase().includes(destinationInput);
-    return matchesBudget && matchesInterests && matchesDestination;
-  });
-
-  if (matchingLocations.length === 0) {
-    resultsContainer.innerHTML = "<p>No matching locations found.</p>";
-  } else {
-    matchingLocations.forEach(loc => {
-      const card = document.createElement("div");
-      card.className = "result-card";
-      card.innerHTML = `
-        <img src="${loc.image}" alt="${loc.name}" />
-        <div class="result-info">
-          <h4>${loc.name}</h4>
-          <p>Budget: ${loc.cost}</p>
-          <p>Interests: ${loc.interests.join(", ")}</p>
-        </div>
-      `;
-      resultsContainer.appendChild(card);
-    });
-  }
-
-});
 
 //simulate payment
 document.getElementById("bookingForm").addEventListener("submit", (e) => {
